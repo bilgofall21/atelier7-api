@@ -7,8 +7,10 @@ import { DetailsService } from '../details.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+[x: string]: any;
 
   // Déclaration des variables
+  commentId = 1;
   details = "";
   detailsData : any ;
   tabDetails : any [] = [];
@@ -16,6 +18,10 @@ export class DetailsComponent implements OnInit {
   constructor (private userDetail: DetailsService){}
 
   ngOnInit(): void {
+    this.userDetail.getUserById(this.commentId).subscribe(data =>{
+      this.detailsData = data;
+      console.log(this.detailsData);
+    })
     this.afficherDetails(),
     console.log(this.afficherDetails);
   }
@@ -25,7 +31,6 @@ export class DetailsComponent implements OnInit {
     this.tabDetails = this.detailsData
 
     });
-    console.log(this.afficherDetails);
   }
 
 

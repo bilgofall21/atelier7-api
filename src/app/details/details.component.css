@@ -7,5 +7,16 @@
 } */
 .entete img{
   height: 300px;
-
+}
+/* textarea{
+  width: 40%;
+} */
+.expcard{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1;
+  align-content: space-evenly;
+}
+.expcard1{
+  margin-bottom: 10%;
 }

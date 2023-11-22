@@ -1,22 +1,35 @@
 <!-- <p>details works!</p> -->
 
 <!-- modal detail des articles -->
-<div *ngIf="partieDetail">
-  <button type="button" class="btn btn-primary" (click)=" listeCoice()" >Details </button>
+<div class="expcard mt-3 card-body" *ngIf="partieDetail">
+  <div class="expcard1 card" style="width: 18rem;" *ngFor="let datacomments of tabDetails">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    <button type="button" class="btn btn-primary" (click)=" listeCoice()" >Details </button>
+    <h5 class="mt-3">Commentaire </h5>
+    <div class="mb-3">
+      <textarea class="form-control mt-3" id="exampleFormControlTextarea1" rows="2"></textarea>
+      <a type="button" class="btn btn-secondary mt-3" >Commenter</a>
+    </div>
+  </div>
+ </div>
 </div>
 
 <!-- details -->
-<div [(ngModel)]="details" *ngFor="let dataphoto of tabDetails" >
+<div [(ngModel)]="details">
   <div *ngIf="!partieDetail" >
   <!-- <div class="entete mt-3 mb-3">
     <img src="https://img.freepik.com/photos-gratuite/inspecteur-financier-secretaire-entreprise-font-rapport-calculent-verifient-equilibre-document-verification-inspecteur-du-service-recettes-internes-concept-audit_1423-126.jpg?size=626&ext=jpg&ga=GA1.1.776136621.1700434133&semt=sph" alt="">
     <h1 class="text-center mt-2">Titre</h1>
   </div> -->
 
-  <div class="modal-body detail">
-    <p>{{dataphoto.title}}</p>
-    <p>{{dataphoto.url}}</p>
-    <p> {{dataphoto.thumbnailUrl}}</p>
+  <div class="modal-body detail"  *ngFor="let datacomments of tabDetails" >
+    <p>{{datacomments.name}}</p>
+    <p>{{datacomments.email}}</p>
+    <p> {{datacomments.body}}</p>
     <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero totam eum aliquid beatae! Harum quis aliquam explicabo,
       culpa voluptate, officiis voluptatibus reiciendis, adipisci odio ullam perferendis totam dicta facere minima.
       Lorem ipsum dolor sit amet consectetur adipisicing elit.Libero totam eum aliquid beatae! Harum quis aliquam explicabo,
@@ -40,14 +53,12 @@
        Libero totam eum aliquid beatae! Harum quis aliquam explicabo,
        culpa voluptate, officiis voluptatibus reiciendis, adipisci odio
        ullam perferendis totam dicta facere minima.</p> -->
-      <!-- <h5>Commentaire </h5>
-    <div class="mb-3">
-      <textarea class="form-control mt-3" id="exampleFormControlTextarea1" cols="10" rows="6"></textarea>
-      <button type="button" class="btn btn-primary mt-3">Commenter</button>
-    </div> -->
+
   </div>
 </div>
 </div>
+
+
 
 
 
