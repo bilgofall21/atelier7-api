@@ -21,8 +21,8 @@ import { DetailsComponent } from './details/details.component';
     AccueilComponent,
     EspaceUtilisateurComponent,
     HeaderComponent,
-    DetailsComponent,
-    CouleurfondDirective
+    CouleurfondDirective,
+    DetailsComponent 
   ],
   imports: [
     BrowserModule,
