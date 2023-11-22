@@ -9,6 +9,8 @@ import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { EspaceUtilisateurComponent } from './espace-utilisateur/espace-utilisateur.component';
+import { HeaderComponent } from './header/header.component';
+import { CouleurfondDirective } from './couleurfond.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { EspaceUtilisateurComponent } from './espace-utilisateur/espace-utilisat
     UsersComponent,
     LoginComponent,
     AccueilComponent,
-    EspaceUtilisateurComponent
+    EspaceUtilisateurComponent,
+    HeaderComponent,
+    CouleurfondDirective
   ],
   imports: [
     BrowserModule,
