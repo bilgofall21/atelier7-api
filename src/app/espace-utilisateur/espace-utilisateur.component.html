@@ -14,8 +14,99 @@
   </div>
 </div>
 
-<div class="ar"></div>
+<div class="article container">
+  
+</div>
 
-<!-- contenue page -->
+<!-- cmodal ajout -->
+
+<!-- modall ajout-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Apprenant</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" accordion-header></button>
+      </div>
+      <div class="modal-body" novalidate>
+        <form action="" #validForm="ngForm" >
+          <div class="col-md-12">
+            <label for="prenom" class="form-label">Prenom:</label>
+            <input type="text" name="prenom" class="form-control" id="validationCustom01" placeholder="Prenom" >
+            <div class="invalid-feedback">
+              <span >
+                veillez entrer votre prenom
+              </span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label for="nom" class="form-label">Nom:</label>
+            <input type="text" name="nom" class="form-control" id="validationCustom01" placeholder="Nom"  >
+            <div class="invalid-feedback">
+              <span >
+                veillez entrer votre nom
+              </span>
+            </div>
+
+          </div>
+          <div class="col-md-12">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" name="email" class="form-control" id="validationCustom01" placeholder="email" required email
+           >
+            <div class="invalid-feedback">
+              <span >
+                veillez renseiger l'email
+              </span>
+              <span >
+                L'email n'est pas comforme
+              </span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label for="password" class="form-label">Password:</label>
+            <input type="text" name="password" class="form-control" id="password" placeholder="Password" required minlength="5"
+           >
+            <div class="invalid-feedback">
+              <span >
+                veiller entrer le mot de pass
+              </span>
+              <span >
+                mot de pass minimum 5 caratères
+              </span>
+
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label for="adresse" class="form-label">Annee:</label>
+            <input type="date" name="annee" id="annee" placeholder="annee"  >
+          </div>
+          <div class="col-md-12">
+            <label for="adresse" class="form-label">Niveau:</label>
+            <select class="form-select form-select-sm mb-3" name="niveau" aria-label="Large select example" required=""
+            >
+            <div class="invalid-feedback">
+              <span >
+              ajouter le niveau
+              </span>
+            </div>
+              <option selected>choisis le niveau</option>
+              <option value="L1">L1</option>
+              <option value="L2">L2</option>
+              <option value="L3">L3</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit" [disabled]="!validForm.valid"  >Ajouter</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- fin modal ajout -->
 
 

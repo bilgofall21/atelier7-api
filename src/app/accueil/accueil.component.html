@@ -1,2 +1,33 @@
 
 <app-header></app-header>
+<!-- <div class="container">
+  <div class="card1" >
+  <div class="card text-white mb-3" style="width: 18rem; background-color: #136c8b;" *ngFor = "let datauser of myData ">
+    <div class="card-header">nom : {{datauser.name}}</div>
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: 16px;">email : {{datauser.email}}</h5>
+      <p class="card-text"> Rue : {{datauser.address.street}}</p>
+      <p class="card-text">Phone : {{datauser.phone}}</p>
+      <p class="card-text"> web : {{datauser.website}}</p>
+    </div>
+  </div>
+  </div>
+</div> -->
+
+<div class="container mt-5">
+  <div class="articleaffiche">
+    <div class="card shadow-lg" style="width: 18rem;"   *ngFor = "let datauser of myData ">
+      <img src="https://img.freepik.com/photos-premium/tablette-smartphone-site-web-actualites-ecran-journaux-dessous_771335-35890.jpg?size=626&ext=jpg&ga=GA1.1.2145246215.1689776414&semt=ais" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5>{{datauser.title}}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class=" d-flex justify-content-center">
+          <button class="btn btn-outline-success" >
+            Detail
+          </button>
+         </div>
+      </div>
+    </div>
+  </div>
+
+</div>
