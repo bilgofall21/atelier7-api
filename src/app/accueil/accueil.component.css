@@ -1,4 +1,15 @@
+/* header */
 
+#userDropdown img
+{
+  height: 40px;
+  width: 40px;
+}
+#userDropdown span
+{
+ color:#650329 ;
+}
+/* fin header */
 
 .articleaffiche{
   display:  grid;

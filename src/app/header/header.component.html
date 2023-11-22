@@ -1,4 +1,4 @@
-<!-- <div class="" appCouleurfond > -->
+
 <nav class="navbar navbar-expand-lg " appCouleurfond  >
   <div class="container-fluid" appCouleurfond>
     <a class="navbar-brand" href="#">Logo</a>
@@ -14,14 +14,26 @@
     </div>
   </div>
 </nav>
-<!-- </div> -->
+
 
 <div class="container  d-flex justify-content-evenly">
-
+<div class="">
+  <form
+  class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0  navbar-search w-100">
+  <div class="input-group ">
+      <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+          aria-label="Search" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+          <button class="btn btn-primary" type="button">
+              <i class="fas fa-search fa-sm"></i>
+          </button>
+      </div>
+  </div>
+</form>
+</div>
 <div class="mt-2">
   <li class="nav-item dropdown no-arrow">
-    <a class="text-decoration-none" href="#" id="userDropdown" role="button"
-       >
+    <a class="text-decoration-none" href="#" id="userDropdown" role="button" [routerLink]="'espace/id'">
         <span class="mr-2 d-none d-lg-inline small">Douglas McGee</span>
         <img class="img-profile rounded-circle"
             src="https://img.freepik.com/photos-gratuite/homme-portant-chemise-inscription-2gg-gaucho-dessus_1340-25365.jpg?w=360&t=st=1700650552~exp=1700651152~hmac=60aea6d81fa87570ad8fce7531734437aa0e05f47556548a031b67167984c8d0">
@@ -29,5 +41,6 @@
 
 </li>
 </div>
+
 
 </div>

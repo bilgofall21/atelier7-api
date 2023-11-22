@@ -11,6 +11,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { EspaceUtilisateurComponent } from './espace-utilisateur/espace-utilisateur.component';
 import { HeaderComponent } from './header/header.component';
 import { CouleurfondDirective } from './couleurfond.directive';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CouleurfondDirective } from './couleurfond.directive';
     AccueilComponent,
     EspaceUtilisateurComponent,
     HeaderComponent,
+    DetailsComponent,
     CouleurfondDirective
   ],
   imports: [
