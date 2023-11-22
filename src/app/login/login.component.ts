@@ -10,11 +10,23 @@ import {Router, Route } from '@angular/router';
 })
 export class LoginComponent {
   myData: any;
+  storedUsers: any;
+  usersdata: any
+  users:any
+
+  Users1: any[] = [];
 
   constructor(private route:Router, private userService: UserServiceService) {
   }
 
   ngOnInit(): void{
+     this.storedUsers = localStorage.getItem('Users1');
+       if (this.storedUsers) {
+         this.usersdata = JSON.parse(this.storedUsers);
+       } else {
+         // Si aucune donnée n'est présente dans le local storage, initialisez-le avec vos données par défaut
+         localStorage.setItem('Users1', JSON.stringify(this.Users1));
+     }
     this.afficher();
   }
 
@@ -26,7 +38,9 @@ export class LoginComponent {
   afficher() {
     this.userService.userData().subscribe((data) => {
       this.myData = data;
-      console.log(this.myData)
+      this.users = this.myData;
+      localStorage.setItem('Users1', JSON.stringify(this.users));
+      console.log(this.users)
     });
   }
 
@@ -41,7 +55,7 @@ export class LoginComponent {
       if (userFound) {
         // console.log("le user a ete trouve")
         this.affichermessage('success', "bienvenu", '')
-        this.route.navigate(['/accueil']);
+        this.route.navigate(['/accueil/',userFound.id]);
       }else {
         console.log("user pas trouver")
       }
